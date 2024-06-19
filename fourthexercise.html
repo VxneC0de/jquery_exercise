@@ -14,6 +14,7 @@
   </ul>
 
   <input type="button" value="ocultar" id="boton1">
+  <input type="button" value="mostrar" id="boton2">
 
   <script src="jquery.js"></script>
 
@@ -25,11 +26,18 @@
     function inicializarEventos(){
       let x=$("#boton1");
       x.click(ocultarItem);
+      x=$("#boton2");
+      x.click(mostrarItem);
     }
 
     function ocultarItem(){
       let x=$("#lista1 li");
       x.hide();
+    }
+
+    function mostrarItem(){
+      let x = $("#lista1 li");
+      x.show();
     }
     
   </script>
