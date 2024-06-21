@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de JQuery 11b</title>
+</head>
+<body>
+
+  <p id="cx">Coordenada en x = </p>
+  <p id="cy">Coordenada en y = </p>
+
+  <script src="jquery.js"></script>
+
+  <script>
+    let x = $(document);
+
+    x.ready(inicializarEventos);
+
+    function inicializarEventos(){
+      let x = $(document);
+      x.mousemove(mover);
+    }
+
+    function mover(evento){
+    let x = $("#cx");
+    x.text("Coordenada en x = " + evento.clientX);
+    let y = $("#cy");
+    y.text("Coordenada en y = " + evento.clientY);
+    
+    if(evento.clientY <= 200){
+      $("body").css("background-image", "url('https://img.freepik.com/free-photo/snowy-mountain-peak-starry-galaxy-majesty-generative-ai_188544-9650.jpg')");
+      $("p").css("color", "white");
+    }else if(evento.clientY <= 400){
+      $("body").css("background-image", "url('https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg')");
+      $("p").css("color", "white");
+    } else{
+      $("body").css("background-image", "url('https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg')");
+      $("p").css("color", "white");
+
+    }
+
+  }
+
+  
+  </script>
+  
+</body>
+</html>

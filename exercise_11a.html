@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejemplo de JQuery 11</title>
+  <title>Ejemplo de JQuery 11a</title>
 </head>
 <body>
 
@@ -24,9 +24,17 @@
 
     function mover(evento){
       let x = $("#cx");
-      x.text("Coordenada en x = "+ evento.clientX);
-      x = $("#cy");
-      x.text("Coordenada en y = "+ evento.clientY);
+      x.text("Coordenada en x = " + evento.clientX);
+      let y = $("#cy");
+      y.text("Coordenada en y = " + evento.clientY);
+      
+      if (evento.clientY > 300) {
+        $("body").css("background-color", "green");
+        $("p").css("color", "white");
+      } else {
+        $("body").css("background-color", "");
+        $("p").css("color", "black");
+      }
     }
   
   </script>
