@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de JQuery 7</title>
+</head>
+<body>
+
+  <input type="button" id="boton1" value="Añadir propiedad border"><br>
+
+  <input type="button" id="boton2" value="Recuperar valor de la propiedad border"><br>
+
+  <input type="button" id="boton3" value="Eliminar la propiedad border">
+
+  <table id="tabla1">
+
+    <tr>
+      <td>1111111111</td>
+      <td>1111111111</td>
+      <td>1111111111</td>
+      <td>1111111111</td>
+    </tr>
+    <tr>
+      <td>2222222222</td>
+      <td>2222222222</td>
+      <td>2222222222</td>
+      <td>2222222222</td>
+    </tr>
+    <tr>
+      <td>3333333333</td>
+      <td>3333333333</td>
+      <td>3333333333</td>
+      <td>3333333333</td>
+    </tr>
+    
+  </table>
+
+  <script src="jquery.js"></script>
+
+  <script>
+    let x = $(document);
+
+    x.ready(inicializarEventos);
+
+    function inicializarEventos() {
+      let x = $("#boton1");
+      x.click(agregarPropiedadBorder);
+      x = $("#boton2");
+      x.click(recuperarPropiedadBorder);
+      x = $("#boton3");
+      x.click(eliminarPropiedadBorder);
+    }
+    
+    function agregarPropiedadBorder() {
+      let x = $("#tabla1");
+      x.attr("border", "1"); //agregame un atributo a mi html, en este caso agrega al border que sea de 1
+    }
+    
+    function recuperarPropiedadBorder() {
+      let x = $("#tabla1");
+      if (x.attr("border") != undefined)
+      alert(x.attr("border")); //muestrase si tiene el valor si el borde es diferente de indefinido
+      else
+      alert("No está definida la propiedad border en la tabla");
+    }
+    
+    function eliminarPropiedadBorder() {
+      let x = $("#tabla1");
+      x.removeAttr("border"); //remueve el atributo del border
+    }
+    
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de JQuery 6</title>
+</head>
+<body>
+
+  <p id="parrafo1">aqui una cosa</p>
+  <p id="parrafo2">aqui una cosa</p>
+
+  <button id="boton1">leer texto</button>
+  <button id="boton2">modificar texto</button>
+
+  <script src="jquery.js"></script>
+
+  <script>
+    let x = $(document);
+
+    x.ready(inicializarEventos);
+
+    function inicializarEventos() {
+      let x = $("#boton1");
+      x.click(extraerTexto);
+      x = $("#boton2");
+      x.click(modificarTexto);
+    }
+    
+    function extraerTexto() {
+      let x = $("#parrafo1");
+      alert(x.text());  //Text() para que aparezca el texto de "x" en la alerta.
+    }
+    
+    function modificarTexto() {
+      let x = $("#parrafo2");
+      x.text("Nuevo texto del párrafo"); //text() reemplaza el parrafo con lo que esta dentro entre comillas a la variable "x".
+    }
+    
+  </script>
+  
+</body>
+</html>
