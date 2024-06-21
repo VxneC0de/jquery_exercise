@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de JQuery 12</title>
+</head>
+<body>
+
+  <div style="width: 300px; height: 300px; background-color: aqua;"> <span id="contador">0</span></div>
+
+  <script src="jquery.js"></script>
+
+  <script>
+  let x = $(document);
+  let contador = 0;
+
+  x.ready(inicializarEventos);
+
+  function inicializarEventos(){
+    let x = $(document);
+    x.mousedown(bajo); //mousedown cuando se mantenga el click
+    x.mouseup(arriba); //mouseup cuando se suelte el click
+  }
+
+  function bajo(){
+    let x = $("div");
+    x.css("background-color", "rgb(24, 161, 161)");
+    contador++;
+    $("#contador").text(contador);
+  }
+
+    function arriba(){
+      let x = $("div");
+      x.css("background-color", "rgb(16, 70, 70)")
+    }
+
+    //quiero que me agregues un contador dentro del div, que cada vez que el usuario le de click(solo mausedown) se vaya sumando al contador esos clicks
+  </script>
+  
+</body>
+</html>
