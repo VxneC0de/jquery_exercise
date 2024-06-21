@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de JQuery 8</title>
+</head>
+<body>
+
+  <img id="opaci1" src="https://www.hispangallery.com/server/Portal_0002996/img/products/cuadro-de-paisaje-de-frances-paisaje-de-flores-rojas-100x100-cm_9386784.JPG" alt="imagen" width="500" height="500" style="opacity: 0.5">
+
+  <script src="jquery.js"></script>
+
+  <script>
+    let x = $(document);
+
+    x.ready(inicializarEventos);
+
+    function inicializarEventos() {
+      let x = $("#opaci1");
+      x.mouseover(entrar);
+      x = $("#opaci1");
+      x.mouseout(salir);
+    }
+
+    function entrar() {
+      $(this).css("opacity","1")
+    }
+
+    function salir() {
+      $(this).css("opacity","0.5")
+    }
+  
+  </script>
+  
+</body>
+</html>
