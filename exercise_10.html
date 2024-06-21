@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejemplo de JQuery 9</title>
+  <title>Ejemplo de JQuery 10</title>
 </head>
 <body>
 
@@ -18,19 +18,17 @@
 
     function inicializarEventos() {
       let x = $("h1");
-      x.mouseover(entrar); //mouseover cuando pase el mouse
-      x = $("h1");
-      x.mouseout(salir); //mouseout cuando quite el mouse
+      x.hover(entrar, salir); //hover toma dos parametros, las dos funciones. Te ahorras separar los eventos
     }
     
     function entrar() {
-      $(this).css("color","#f00"); //cuando se toma un elemento por ejemplo h1, tomame ese elemento al que ya le pasaste por encima
+      $(this).css("color","#f00");
     }
 
     function salir() {
       $(this).css("color","#000");
     }
-
+  
   </script>
   
 </body>
