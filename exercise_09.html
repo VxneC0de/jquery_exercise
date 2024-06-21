@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  
+  <h1>pase de mouse y salida de mouse</h1>
 
   <script src="jquery.js"></script>
 
@@ -16,7 +16,21 @@
 
     x.ready(inicializarEventos);
 
+    function inicializarEventos() {
+      let x = $("h1");
+      x.mouseover(entrar); //mouseover cuando pase el mouse
+      x = $("h1");
+      x.mouseout(salir); //mouseout cuando quite el mouse
+    }
     
+    function entrar() {
+      $(this).css("color","#f00") //cuando se toma un elemento por ejemplo h1, tomame ese elemento al que ya le pasaste por encima
+    }
+
+    function salir() {
+      $(this).css("color","#000")
+    }
+
   </script>
   
 </body>
