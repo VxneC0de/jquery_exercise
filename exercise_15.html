@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejemplo de JQuery 14</title>
+  <title>Ejemplo de JQuery 15</title>
 </head>
 <body>
     
@@ -18,12 +18,11 @@
         
         function inicializarEventos(){
             let x = $("#box");
-            x.focus(cambios);
+            x.blur(alertFuction);
         }
         
-        function cambios(){
-            let x = $("#box");
-            x.css("border", "2px solid pink");
+        function alertFuction(){
+            alert("¡Cursor fuera del campo de entrada!");
         }
     
     </script>

@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejemplo de JQuery 14</title>
+  <title>Ejemplo de JQuery 16</title>
 </head>
 <body>
     
-    <input type="text" id="box" style="width: 300px; height: 300px; background-color: aqua; border: 2px solid black;">
+    <ul>
+        <li>Puesto 1</li>
+        <li>Puesto 2</li>
+        <li>Puesto 3</li>
+        <li>Puesto 4</li>
+        <li>Puesto 5</li>
+        <li>Puesto 6</li>
+    </ul>
     
     <script src="jquery.js"></script>
     
@@ -17,13 +24,13 @@
         x.ready(inicializarEventos);
         
         function inicializarEventos(){
-            let x = $("#box");
-            x.focus(cambios);
+            let x = $("li");
+            x.click(vaciar);
         }
-        
-        function cambios(){
-            let x = $("#box");
-            x.css("border", "2px solid pink");
+
+        function vaciar(){
+            x = $(this);
+            x.empty();
         }
     
     </script>
