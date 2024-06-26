@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de JQuery 18</title>
+</head>
+<body>
+
+    <section id="section">
+        
+        <p>123456789</p>
+        <p>123456</p>
+        <p>12345</p>
+        <p>1234</p>
+        <p>25665415</p>
+        <p>1255</p>
+
+    </section>
+    
+    
+    
+    <script src="jquery.js"></script>
+    
+    <script>
+        
+        let x = $(document);
+        x.ready(inicializarEventos);
+        
+        function inicializarEventos(){
+            let x = $("#section p");
+            x.each(fuera);
+        }
+
+        function fuera(){
+            let x = $(this);
+            if(x.text().length >= 5){
+                x.css("color", "pink");
+            }
+        }
+
+    </script>
+  
+</body>
+</html>

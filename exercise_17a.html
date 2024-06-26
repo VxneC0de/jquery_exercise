@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de JQuery 17a</title>
+</head>
+<body>
+    
+    <img id="image" src="https://www.hispangallery.com/server/Portal_0002996/img/products/cuadro-de-paisaje-de-frances-paisaje-de-flores-rojas-100x100-cm_9386784.JPG" alt="imagen" width="500" height="500">
+
+    <br>
+    <button id="boton">Click</button>
+    
+    <script src="jquery.js"></script>
+    
+    <script>
+        
+        let x = $(document);
+        x.ready(inicializarEventos);
+        
+        function inicializarEventos(){
+            let x = $("#boton");
+            x.click(toggleFuction);
+        }
+
+        function toggleFuction(){
+            let x = $("#image")
+            x.toggle("slow")
+        }
+    
+    </script>
+  
+</body>
+</html>
