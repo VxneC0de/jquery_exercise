@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejemplo de JQuery 17</title>
+  <title>Ejemplo de JQuery 14</title>
 </head>
 <body>
     
-    <p>Hello Word!</p>
-    <br>
-    <button id="boton">Click</button>
+    <input type="text" id="box" value="Escriba su cedula">
     
     <script src="jquery.js"></script>
     
@@ -19,13 +17,13 @@
         x.ready(inicializarEventos);
         
         function inicializarEventos(){
-            let x = $("#boton");
-            x.click(toggleFuction);
+            let x = $("#box");
+            x.focus(cambios);
         }
-
-        function toggleFuction(){
-            x = $("p");
-            x.toggle();
+        
+        function cambios(){
+            let x = $("#box");
+            x.css("background", "pink");
         }
     
     </script>

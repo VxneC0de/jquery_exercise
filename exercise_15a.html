@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de JQuery 15a</title>
+</head>
+<body>
+    
+    <input type="text" id="box" value="Ingrese su edad">
+    
+    <script src="jquery.js"></script>
+    
+    <script>
+        
+        let x = $(document);
+        x.ready(inicializarEventos);
+        
+        function inicializarEventos(){
+            let x = $("#box");
+            x.blur(alertFuction);
+        }
+        
+        function alertFuction(){
+            let x = $("#box");
+            x.attr("value");
+            
+            if (edad < 18) {
+                alert("Edad inválida, debe ser mayor a 18.");
+            } else {
+                alert("¡Bienvenido!");
+            }
+        }
+
+        function alertFuction() {
+            let edad = parseInt($("#box").val()); // Obtener el valor ingresado y convertirlo a número
+            
+            if (edad < 18) {
+                alert("Edad inválida, debe ser mayor a 18.");
+            } else {
+                alert("¡Bienvenido!");
+            }
+        }
+
+    </script>
+  
+</body>
+</html>

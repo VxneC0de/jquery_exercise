@@ -7,7 +7,8 @@
 </head>
 <body>
 
-  <div style="width: 300px; height: 300px; background-color: aqua;"><span id="contador">0</span></div>
+  <div style="width: 300px; height: 300px; border: 2px solid black;"><span id="contador">0</span></div>
+  <button id="b1" type="button">Count++</button>
 
   <script src="jquery.js"></script>
 
@@ -18,23 +19,15 @@
   x.ready(inicializarEventos);
 
   function inicializarEventos(){
-    let x = $(document);
+    let x = $("#b1");
     x.mousedown(bajo); //mousedown cuando se mantenga el click
-    x.mouseup(arriba); //mouseup cuando se suelte el click
   }
 
   function bajo(){
     let x = $("div");
-    x.css("background-color", "rgb(24, 161, 161)");
     contador++;
     $("#contador").text(contador);
   }
-
-    function arriba(){
-      let x = $("div");
-      x.css("background-color", "rgb(16, 70, 70)")
-    }
-
    
   </script>
   
